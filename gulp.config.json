@@ -1,0 +1,45 @@
+{
+  "default": {
+    "angular": {
+      "isAngularProject": false,
+      "appName": "app",
+      "angularSrc": "angular",
+      "singleModule": false
+    },
+    "assetsSrc": "assets",
+    "defaultDest": "public",
+    "libraries": [
+      {
+        "name": "parallax",
+        "sources": ["vendor/parallax.js/parallax.min.js"]
+      }
+    ],
+    "extraStylesheets": [
+    ],
+    "jshint": true,
+    "jscs": true,
+    "verbose": false,
+    "minify": true,
+    "sourceMaps": true,
+    "serve": {
+      "port": 8000,
+      "isProxy": false,
+      "proxyTarget": null,
+      "websockets": false
+    }
+  },
+
+  "prod": {
+    "jshint": false,
+    "jscs": false,
+    "minify": true,
+    "verbose": false,
+    "sourceMaps": false,
+    "serve": {
+      "port": 8028,
+      "isProxy": false,
+      "proxyTarget": null,
+      "websockets": false
+    }
+  }
+}

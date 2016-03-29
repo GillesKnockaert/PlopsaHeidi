@@ -1,0 +1,335 @@
+body, html {
+  font-family: 'Signika', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.167;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 1.75;
+  margin-bottom: 15px;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.429;
+  margin-bottom: 10px;
+}
+
+.button {
+  cursor: pointer;
+  margin: 15px 0px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  box-shadow: 0px 2px 2px 0px rgba(35, 31, 32, 0.29);
+  padding: 15px 25px;
+  a{
+    text-decoration: none;
+  }
+}
+
+.button-Odd {
+  background-color: rgb(140, 69, 119);
+}
+
+.button-Even {
+  margin-left: 5px;
+  background-color: rgb(199, 147, 136);
+}
+
+//----------Header----------
+header {
+  //background: url("../img/HeaderBackground.png" ) no-repeat center center fixed;
+  //background-size: cover;
+  width: 100%;
+  min-height: 730px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e091a1;
+  #headerWrapper {
+    position: relative;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0 0 0;
+    color: #fff;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 768px;
+    > img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+    }
+  }
+  #storeButtons {
+    max-width: 660px;
+    margin: 0 auto 15px auto;
+    img {
+      margin: 0 5px 0px 5px;
+    }
+    #appleStore, #playStore{
+      margin-top: 10px;
+    }
+    #appleStore{
+      float: left;
+    }
+    #playStore{
+      float: right;
+    }
+  }
+  > img {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+  #language{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: white;
+    text-align: right;
+    position: relative;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@include bp-large {
+  header > img {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+//----------All Sections----------
+section {
+  h1 {
+    margin-bottom: 15px;
+  }
+}
+
+.sectionWrapperSmall {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 768px;
+}
+
+.sectionWrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 950px;
+}
+
+//----------Section 1----------
+#section1 {
+  margin-top: 40px;
+  text-align: left;
+  .sectionOneHeader{
+    float: right;
+    width: 50%;
+    padding-left:5px;
+  }
+  img {
+    width: 50%;
+    padding: 5px 5px 5px 0;
+    float: left;
+  }
+  #heidiTheRide {
+    float: right;
+    width: 50%;
+    padding: 5px;
+  }
+  #ARTitle {
+    h1{
+      padding-top: 40px;
+      clear: both;
+    }
+    margin: 20px auto;
+  }
+}
+
+//----------Section 2----------
+#section2{
+  position: relative;
+  .parallax-window {
+    min-height: 800px;
+    background: transparent;
+  }
+  #logos{
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+  }
+  img{
+    display: block;
+    margin: 10px;
+  }
+}
+//----------Section 3----------
+#section3 {
+  padding-top: 40px;
+  padding-bottom: 5px;
+  color: rgb(255, 255, 255);
+  background: url("../img/MediumBackground.png");
+  background-size: cover;
+  h1 {
+    margin-bottom: 0px;
+  }
+  p {
+    margin: 20px 0px;
+  }
+}
+
+//----------Section 4----------
+#section4 {
+  margin-top: 40px;
+  p {
+    margin: 20px 0;
+  }
+  img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+  }
+  .button {
+    width: 210px;
+    margin: 30px 0px;
+  }
+  .button-Odd{
+    margin-right: 5px;
+  }
+}
+
+//----------Footer----------
+footer {
+  color: rgb(255, 255, 255);
+  background: url("../img/SmallBackground.png");
+  background-size: cover;
+  p {
+    padding-top: 7px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .addthis_sharing_toolbox {
+    padding: 3px 0 3px 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//----------Media Querry----------
+@media (max-width: 487px) {
+  #section4 .button {
+    margin: 5px 0px;
+  }
+  footer {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 499px) {
+  #section3 {
+    img:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  #section1{
+    .button{
+      margin: 5px 0px;
+    }
+    .button-Even, .button-Odd{
+margin-left: 5px;
+    }
+  }
+}
+@media (max-width: 670px) {
+  #section1{
+    text-align: center;
+    .sectionOneHeader{
+      width: 100%;
+      padding-left: 0px;
+      float: left;
+    }
+    img{
+      width: 100%;
+      margin: 0 auto;
+    }
+    #heidiTheRide{
+      padding-left: 0px;
+      width: 100%;
+    }
+    .button{
+      margin-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #section2 .parallax-window {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  #section2 .parallax-window {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 700px) {
+  h1{
+    font-size: 1.8em;
+  }
+  h2{
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 550px) {
+  h1{
+    font-size: 1.4em;
+  }
+  h2{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 702px) {
+  header #headerWrapper #storeButtons #appleStore{
+    float: none;
+  }
+  header #headerWrapper #storeButtons #playStore{
+    float: none;
+  }
+  header #headerWrapper #storeButtons #plopsaLogo{
+    display: block;
+    margin: 0 auto;
+  }
+}
